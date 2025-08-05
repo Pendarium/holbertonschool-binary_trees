@@ -28,7 +28,8 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	/* On compte récursivement les feuilles du sous-arbre gauche */
 	children_left = binary_tree_leaves(tree->left);
 
-	/* Le nombre total de feuilles est la somme des feuilles des deux sous-arbres */
+	/* Le nombre total de feuilles est la somme*/
+	/*des feuilles des deux sous-arbres */
 	leaf = children_left + children_right;
 
 	return (leaf);
