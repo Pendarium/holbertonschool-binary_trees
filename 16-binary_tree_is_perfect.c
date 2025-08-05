@@ -79,6 +79,7 @@ int check_perfect(const binary_tree_t *tree, int level, int expected_depth)
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int height;
+	int check;
 
 	/* Si l'arbre est NULL, il ne peut pas être parfait */
 	if (tree == NULL)
@@ -88,5 +89,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	height = binary_tree_height(tree);
 
 	/* On vérifie récursivement si l'arbre est parfait */
-	return (check_perfect(tree, 0, height - 1));
+
+	check = check_perfect(tree, 0, height - 1);
+	return (check);
 }
