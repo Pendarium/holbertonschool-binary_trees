@@ -12,13 +12,11 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	size_t left_height;
 	size_t right_height;
 
-	/* Si l'arbre est NULL, sa hauteur est 0 */
-	if (tree == NULL)
-		return (0);
+		/* Si l'arbre est NULL, sa hauteur est 0 */
+		if (tree == NULL)
+			return (0);
 
-	/* Si le noeud est une feuille, sa hauteur est 0 */
-	if (tree->left == NULL && tree->right == NULL)
-		return (0);
+
 
 	/* On calcule récursivement la hauteur du sous-arbre gauche */
 	left_height = binary_tree_height(tree->left);
@@ -50,6 +48,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 	{
 		return (0);
 	}
+
 
 left_height = binary_tree_height(tree->left);
 right_height = binary_tree_height(tree->right);
